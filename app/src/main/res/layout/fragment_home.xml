@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:orientation="vertical"
+android:weightSum="5"
+android:background="@drawable/gredient_search_background"
+tools:context=".fragments.navfragments.HomeFragment"
+    >
+
+<RelativeLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:paddingTop="20dp"
+    android:paddingStart="20dp"
+    android:layout_weight="0.5">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userProfile"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/fast_food" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/username"
+        style="@style/secondary_text_bold_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toEndOf="@id/userProfile"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="John Doe" />
+
+
+    <ImageView
+        android:id="@+id/btnNotification"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
+        android:padding="3dp"
+        android:src="@drawable/icon_notifications" />
+
+    <TextView
+        android:id="@+id/notificationCount"
+        style="@style/white_text_bold_small"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="-15dp"
+        android:layout_toStartOf="@id/btnNotification"
+        android:background="@drawable/app_button_background"
+        android:textAlignment="center" />
+
+</RelativeLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.4"
+    android:orientation="vertical"
+    android:paddingEnd="15dp"
+    android:paddingStart="15dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:cardCornerRadius="30dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:elevation="1dp"
+        app:cardMaxElevation="1dp"
+        app:cardElevation="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/search_background"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchText"
+                style="@style/heading_text_medium"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/search_something"
+                android:inputType="none"
+                android:textAlignment="center" />
+
+
+            <ImageView
+                android:id="@+id/btnSearch"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/icon_search_primary"
+                android:padding="4dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"/>
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_weight="2.6">
+
+       <androidx.cardview.widget.CardView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           app:cardCornerRadius="20dp"
+           android:elevation="1dp"
+           app:cardElevation="1dp"
+           app:cardMaxElevation="1dp"
+           app:cardBackgroundColor="@android:color/transparent">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <fragment
+                   android:id="@+id/mapFragment"
+                   android:name="com.google.android.gms.maps.SupportMapFragment"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent" />
+
+               <ImageView
+                   android:visibility="gone"
+                   android:id="@+id/btnMyCurrentLocation"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:src="@drawable/ic_baseline_my_location_24"
+                   android:layout_alignParentEnd="true"
+                   android:layout_alignParentBottom="true"
+                   android:layout_marginEnd="20dp"
+                   android:layout_marginBottom="20dp"/>
+
+           </RelativeLayout>
+
+
+
+
+       </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_store_profile_shimmer"/>
+            <include layout="@layout/item_store_profile_shimmer"/>
+            <include layout="@layout/item_store_profile_shimmer"/>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/homeRecyclerView"
+        android:background="@color/accent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="58dp"
+        android:layout_weight="1.5"/>
+</LinearLayout>

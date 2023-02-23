@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="5dp"
+    android:elevation="1dp"
+    app:cardElevation="1dp"
+    app:cardMaxElevation="1dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:layout_height="80dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_background">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/productPicture"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/productName"
+            style="@style/secondary_text_medium_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/productPicture"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAlignment="viewStart"
+            android:text="Spa" />
+
+        <TextView
+            android:id="@+id/productPrice"
+            style="@style/secondary_text_regular_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/productName"
+            android:layout_toEndOf="@id/productPicture"
+            android:visibility="gone"
+            android:maxLines="1"
+            android:text="$11.26" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

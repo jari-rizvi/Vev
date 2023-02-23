@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_weight="5"
+android:paddingTop="60dp"
+android:background="@color/accent"
+tools:context=".fragments.auth.EmailOTPFragment">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="60dp"
+    android:layout_marginEnd="10dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/otpHeading"
+        style="@style/secondary_text_bold_Extralarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/one_time_password" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/otpDescription"
+        style="@style/secondary_text_light_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/otpHeading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="@string/email_otp_message" />
+
+    <com.chaos.view.PinView
+        android:id="@+id/pinView"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/otpDescription"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:cursorVisible="true"
+        android:inputType="number"
+        android:itemBackground="@color/white"
+        app:cursorColor="@color/black"
+        app:hideLineWhenFilled="false"
+        app:itemCount="6"
+        app:itemHeight="55dp"
+        app:itemRadius="8dp"
+        app:itemWidth="55dp"
+        app:lineColor="@color/colorPrimary"
+        app:lineWidth="1dp" />
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnVerifyOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp"
+        android:layout_below="@id/pinView"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        app:cardElevation="5dp"
+        android:elevation="5dp"
+        android:layout_marginBottom="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/app_button_background"
+            android:padding="5dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/verify"
+                android:textAllCaps="true"
+                android:layout_weight="1"
+                android:paddingStart="30dp"
+                style="@style/white_text_bold_medium"
+                android:gravity="center_horizontal|center_vertical"/>
+
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/icon_arrow"
+                android:layout_marginEnd="10dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/resentheading"
+        style="@style/secondary_text_regular_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnVerifyOtp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/didn_t_you_receive_any_code" />
+
+
+    <TextView
+        android:id="@+id/resentOtp"
+        style="@style/colorPrimary_text_regular_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resentheading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/re_send_code" />
+
+    <View
+        android:id="@+id/forgotPassowrdline"
+        android:layout_width="95dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/forgotPassowrd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-1dp"
+        android:background="@color/colorPrimary" />
+
+
+
+</RelativeLayout>
+
+
+
+
+</LinearLayout>

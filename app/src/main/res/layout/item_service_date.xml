@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="48dp"
+    android:layout_height="55dp"
+    app:cardCornerRadius="10dp"
+    android:layout_marginStart="10dp"
+    android:elevation="1dp"
+    app:cardElevation="1dp"
+    app:cardMaxElevation="1dp">
+
+    <LinearLayout
+        android:id="@+id/layoutBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="5dp"
+        android:padding="8dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/date_background_boarder">
+
+        <TextView
+            android:id="@+id/date"
+            style="@style/colorPrimary_text_regular_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/day"
+            style="@style/colorPrimary_text_regular_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date"
+            android:text="tues" />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

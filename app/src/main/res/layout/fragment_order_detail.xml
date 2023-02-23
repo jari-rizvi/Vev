@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:weightSum="5"
+android:background="@color/accent"
+    android:id="@+id/rootLayout"
+tools:context=".fragments.order.OrderDetailFragment">
+
+<RelativeLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:paddingTop="20dp"
+    android:layout_weight="0.5">
+
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:padding="5dp"
+        android:src="@drawable/back" />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/secondary_text_bold_Extralarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/order_detail" />
+
+</RelativeLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="4.1"
+    android:orientation="vertical"
+    android:paddingEnd="15dp"
+    android:paddingStart="15dp"
+    android:paddingTop="20dp">
+
+    <ScrollView
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/accent"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+
+            <TextView
+                android:id="@+id/orderId"
+                style="@style/secondary_text_medium_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="id #1327444858" />
+
+            <TextView
+                android:id="@+id/orderDate"
+                style="@style/secondary_text_light_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monday 21 April" />
+
+
+            <TextView
+                android:id="@+id/dileverTo"
+                style="@style/secondary_text_medium_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/deliver_to" />
+
+            <TextView
+                android:id="@+id/txtdeliveryAddress"
+                style="@style/secondary_text_light_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No 123, Sub Street, Main Street,\nCity Name, Province,
+                \nCountry" />
+
+            <TextView
+                android:id="@+id/payemntMethodHeading"
+                style="@style/secondary_text_medium_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/payment_methhod" />
+
+            <TextView
+                android:id="@+id/payemntMethodType"
+                style="@style/secondary_text_light_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monday 21 April" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:background="@color/primaryText" />
+
+            <TextView
+                style="@style/secondary_text_medium_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/items" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/itemRecyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/accent" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="0.5"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/secondary_text_medium_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/total" />
+
+        <TextView
+            android:id="@+id/totalprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5685 AED"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:textAllCaps="true"
+            style="@style/secondary_text_light_medium" />
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
+
+</LinearLayout>

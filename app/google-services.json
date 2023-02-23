@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "832766811020",
+    "project_id": "vevuae",
+    "storage_bucket": "vevuae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:832766811020:android:1e1c8e401715c0ac3594a9",
+        "android_client_info": {
+          "package_name": "com.teamx.vevae"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "832766811020-gteoiejkapcecfhnt695qm2loaj5lfaf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.teamx.vevae",
+            "certificate_hash": "e6f37c518bf9f0e2b291e9fdc8911e8643500cbb"
+          }
+        },
+        {
+          "client_id": "832766811020-9qk7tbcc3fs89euccse2g3tm8n46quhs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiZvtpcnN71XnqENK_-Vzns72ETfVihac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "832766811020-9qk7tbcc3fs89euccse2g3tm8n46quhs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "832766811020-gr2rarp532a90g40b8cuifuf47vlf5lj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.teamX.Vev"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

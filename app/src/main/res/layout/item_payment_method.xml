@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/methodLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/accent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/paymentType"
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:button="@null"
+            android:drawableStart="@drawable/method_selector"
+            android:paddingStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="5dp"
+            android:paddingEnd="20dp"
+            android:layout_gravity="center_vertical"
+            style="@style/secondary_text_bold_medium" />
+
+        <ImageView
+            android:id="@+id/paymentImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_master"
+            android:layout_gravity="center_vertical"/>
+
+
+        <TextView
+            android:id="@+id/paymentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="master Card end **00"
+            android:layout_marginStart="10dp"
+            style="@style/secondary_text_bold_medium"/>
+
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:background="@color/primaryText"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"/>
+
+
+</LinearLayout>

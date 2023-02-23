@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:orientation="vertical"
+android:paddingEnd="15dp"
+android:paddingStart="15dp"
+    android:id="@+id/rootLayout"
+android:background="@color/accent"
+tools:context=".fragments.preview.ProductPreviewFragment">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/item_product_preview_shimmer"/>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/mainLayout"
+        android:visibility="gone"
+        android:weightSum="5">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingTop="20dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_weight="0.5">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="4dp"
+                android:src="@drawable/back"
+                android:layout_centerVertical="true"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Faux Sued Ankle Boots"
+                android:id="@+id/productname"
+                android:layout_centerInParent="true"
+                style="@style/secondary_text_light_medium"/>
+
+
+
+            <ImageView
+                android:id="@+id/btnCart"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="4dp"
+                android:src="@drawable/icon_cart"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/cartCount"
+                style="@style/white_text_bold_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="-15dp"
+                android:layout_toStartOf="@id/btnCart"
+                android:background="@drawable/app_button_background"
+                android:padding="4dp"
+                android:text="10"
+                android:textAlignment="center" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="5dp"
+            android:layout_weight="4">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:padding="20dp"
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="220dp" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:background="@color/accent"
+                app:tabIndicatorHeight="0dp"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:id="@+id/tabLayout"
+                app:tabGravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                app:tabMaxWidth="10dp"
+                app:tabBackground="@drawable/indicator_selector"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:text="19.99 AED"
+                style="@style/secondary_text_bold_large"
+                android:textAlignment="center"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_decription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                style="@style/secondary_text_medium_small"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"/>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/modifier_name_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="Select Class"
+                style="@style/colorPrimary_text_medium_medium"
+                android:textAlignment="center"/>
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/modifier_one_recycler_view"/>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/modifier_name_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="Select Class"
+                style="@style/colorPrimary_text_medium_medium"
+                android:textAlignment="center"/>
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/modifier_two_recycler_view"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:layout_weight="0.5">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnAddToCart"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                app:cardElevation="4dp"
+                android:elevation="4dp"
+                app:cardMaxElevation="4dp"
+                app:cardCornerRadius="30dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/app_button_background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/add_to_cart"
+                        style="@style/white_text_bold_large"/>
+
+                    <ImageView
+                        android:id="@+id/buttonBackImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_arrow"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

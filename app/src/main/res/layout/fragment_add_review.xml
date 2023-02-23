@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/accent"
+    android:padding="20dp"
+    android:orientation="vertical"
+    android:id="@+id/rootLayout"
+    tools:context=".fragments.StoreProfile.AddReviewFragment">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/btnBack"
+        android:src="@drawable/back"
+        android:layout_marginBottom="20dp"/>
+
+   <!-- <RatingBar
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomRatingBar"
+        android:numStars="5"
+        android:stepSize="0.1"
+        />-->
+
+
+    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxHeight="40dp"
+        android:minHeight="40dp"
+        android:numStars="5"
+        android:layout_marginBottom="20dp"
+        app:mrb_progressTint="@color/colorPrimary"
+        android:progressBackgroundTint="@color/colorPrimary"
+        style="@style/Widget.MaterialRatingBar.RatingBar" />
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:elevation="1dp"
+        app:cardElevation="1dp"
+        app:cardMaxElevation="1dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/login_background">
+
+            <EditText
+                android:id="@+id/edit_review"
+                style="@style/secondary_text_light_medium"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:hint="@string/describe_your_experiance"
+                android:padding="10dp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnAddReview"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="end"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        app:cardElevation="5dp"
+        android:elevation="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="20dp">
+        <LinearLayout
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/app_button_background"
+            android:padding="5dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/post"
+                android:textAllCaps="true"
+                android:layout_weight="1"
+                style="@style/white_text_bold_small"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_horizontal|center_vertical"/>
+
+
+
+
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/icon_arrow"
+                android:layout_marginEnd="5dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+</LinearLayout>

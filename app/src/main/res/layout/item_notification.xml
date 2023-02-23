@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="@color/accent"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/notificationImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/fast_food"
+        android:layout_gravity="center_vertical"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/notificationDescription"
+            style="@style/secondary_text_light_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/notification_time"
+            android:text="Smiley’s Store marked your order #1982984 as shipped." />
+
+        <TextView
+            android:id="@+id/notification_time"
+            style="@style/secondary_text_light_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:text="9:20 AM" />
+
+
+      <!--  <ImageView
+            android:id="@+id/notificationStatus"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/notification_time"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/icon_active" />-->
+
+
+        <View
+            android:layout_below="@id/notificationDescription"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/primaryText"/>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

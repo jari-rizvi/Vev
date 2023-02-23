@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/methodLayout"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    android:background="@color/accent"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/serviceType"
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:button="@null"
+            android:drawableStart="@drawable/method_selector"
+            android:paddingStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="5dp"
+            android:paddingEnd="20dp"
+            android:layout_gravity="center_vertical"
+            style="@style/secondary_text_bold_medium" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/colorPrimary_text_regular_large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:layout_marginStart="10dp"
+                android:text="45-minute spa treatment" />
+
+            <TextView
+                android:id="@+id/amount"
+                style="@style/secondary_text_medium_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textAlignment="viewStart"
+                android:text="AED 99" />
+
+            <TextView
+                android:id="@+id/totalOrder"
+                style="@style/secondary_text_medium_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textAlignment="viewStart"
+                android:visibility="gone"
+                android:text="580+ bought" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/primaryText"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
+        />
+
+
+
+</RelativeLayout>

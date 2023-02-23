@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.teamx.vevae.fragments.navfragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.teamx.vevae.fragments.navfragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.teamx.vevae.fragments.navfragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.teamx.vevae.fragments.navfragments.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.teamx.vevae.fragments.settings.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/chnagePasswordFragment"
+        android:label="fragment_chnage_password"
+        tools:layout="@layout/fragment_chnage_password" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.teamx.vevae.fragments.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.teamx.vevae.fragments.settings.LanguageFragment"
+        android:label="fragment_language"
+        tools:layout="@layout/fragment_language" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.teamx.vevae.fragments.settings.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/orderListFragment"
+        android:name="com.teamx.vevae.fragments.order.OrderListFragment"
+        android:label="fragment_order_list"
+        tools:layout="@layout/fragment_order_list" />
+    <fragment
+        android:id="@+id/paymentMethodFragment"
+        android:name="com.teamx.vevae.fragments.payment.PaymentMethodFragment"
+        android:label="fragment_payment_method"
+        tools:layout="@layout/fragment_payment_method" />
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="com.teamx.vevae.fragments.order.OrderDetailFragment"
+        android:label="fragment_order_detail"
+        tools:layout="@layout/fragment_order_detail" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.teamx.vevae.fragments.cart.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/checkOutFragment"
+        android:name="com.teamx.vevae.fragments.checkout.CheckOutFragment"
+        android:label="fragment_check_out"
+        tools:layout="@layout/fragment_check_out" />
+    <fragment
+        android:id="@+id/orderPlaceFragment"
+        android:name="com.teamx.vevae.fragments.orderplace.OrderPlaceFragment"
+        android:label="fragment_order_place"
+        tools:layout="@layout/fragment_order_place" />
+    <fragment
+        android:id="@+id/shippingAddressFragment"
+        android:name="com.teamx.vevae.fragments.address.ShippingAddressFragment"
+        android:label="fragment_shipping_address"
+        tools:layout="@layout/fragment_shipping_address" />
+    <fragment
+        android:id="@+id/storeProfileFragment"
+        android:name="com.teamx.vevae.fragments.StoreProfile.StoreProfileFragment"
+        android:label="fragment_store_profile"
+        tools:layout="@layout/fragment_store_profile" />
+    <fragment
+        android:id="@+id/storeHomeFragment"
+        android:name="com.teamx.vevae.fragments.StoreProfile.StoreHomeFragment"
+        android:label="fragment_store_home"
+        tools:layout="@layout/fragment_store_home" />
+    <fragment
+        android:id="@+id/storeReviewFragment"
+        android:name="com.teamx.vevae.fragments.StoreProfile.StoreReviewFragment"
+        android:label="fragment_store_review"
+        tools:layout="@layout/fragment_store_review" />
+    <fragment
+        android:id="@+id/seeAllProductsFragment"
+        android:name="com.teamx.vevae.fragments.StoreProfile.SeeAllProductsFragment"
+        android:label="fragment_see_all_products"
+        tools:layout="@layout/fragment_see_all_products" />
+    <fragment
+        android:id="@+id/addReviewFragment"
+        android:name="com.teamx.vevae.fragments.StoreProfile.AddReviewFragment"
+        android:label="fragment_add_review"
+        tools:layout="@layout/fragment_add_review" />
+    <fragment
+        android:id="@+id/servicesFragment"
+        android:name="com.teamx.vevae.fragments.services.ServicesFragment"
+        android:label="fragment_services"
+        tools:layout="@layout/fragment_services" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.teamx.vevae.fragments.settings.ChangePasswordFragment"
+        android:label="fragment_chnage_password"
+        tools:layout="@layout/fragment_chnage_password" />
+    <fragment
+        android:id="@+id/productPreviewFragment"
+        android:name="com.teamx.vevae.fragments.preview.ProductPreviewFragment"
+        android:label="fragment_product_preview"
+        tools:layout="@layout/fragment_product_preview" />
+    <fragment
+        android:id="@+id/allAddressFragment"
+        android:name="com.teamx.vevae.fragments.address.AllAddressFragment"
+        android:label="fragment_all_address"
+        tools:layout="@layout/fragment_all_address" />
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="com.teamx.vevae.fragments.settings.PrivacyPolicyFragment"
+        android:label="fragment_privacy_policy"
+        tools:layout="@layout/fragment_privacy_policy" />
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.teamx.vevae.fragments.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" />
+
+</navigation>

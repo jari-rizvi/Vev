@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:orientation="vertical"
+android:background="@color/accent"
+android:weightSum="5"
+    android:id="@+id/rootLayout"
+tools:context=".fragments.settings.EditProfileFragment">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginStart="20dp"
+    android:layout_weight="1">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/back"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profilePicture"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_below="@id/btnBack"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/boarder"
+        android:padding="2dp"
+        android:src="@mipmap/ic_launcher" />
+
+
+    <ImageView
+        android:id="@+id/btnAddPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:src="@drawable/icon_camera" />
+
+
+
+</RelativeLayout>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="4"
+    android:layout_gravity="center_vertical"
+    android:layout_marginEnd="20dp"
+    android:layout_marginStart="20dp"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_marginBottom="5dp"
+        app:cardElevation="1dp"
+        app:cardMaxElevation="1dp"
+        android:elevation="1dp"
+        app:cardBackgroundColor="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/login_background"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+
+            <TextView
+                style="@style/heading_text_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:paddingStart="10dp"
+                android:text="@string/name"
+                android:textAllCaps="true" />
+
+            <EditText
+                android:id="@+id/edit_name"
+                style="@style/secondary_text_regular_medium"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/transparent"
+                android:focusableInTouchMode="true"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text=""
+                android:textColorHint="@color/secondaryText"
+                android:textAlignment="viewStart"
+                />
+
+
+            <View
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/primaryText" />
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/btnDateOfBirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/dateOfBirth"
+                    style="@style/heading_text_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingStart="10dp"
+                    android:text="@string/date_of_birth"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:id="@+id/text_DOB"
+                    style="@style/secondary_text_regular_medium"
+                    android:layout_below="@id/dateOfBirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="@android:color/transparent"
+                    android:focusableInTouchMode="true"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="05/12/2020"
+                    android:textColorHint="@color/secondaryText"
+                    />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/icon_down_arrow"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"/>
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/primaryText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioMale"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:textColor="@color/colorPrimary"
+                        android:paddingStart="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/male" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/accent" />
+
+
+
+                    <RadioButton
+                        android:id="@+id/radioFemale"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="20dp"
+                        android:layout_marginStart="10dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:textColor="@color/colorPrimary"
+                        android:text="@string/female" />
+
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/primaryText" />
+
+
+
+
+
+            <TextView
+                style="@style/heading_text_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:paddingStart="10dp"
+                android:text="@string/email"
+                android:textAllCaps="true" />
+
+            <EditText
+                android:id="@+id/edit_email"
+                style="@style/secondary_text_regular_medium"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/transparent"
+                android:focusableInTouchMode="true"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textAlignment="viewStart"
+                android:text=""
+                android:textColorHint="@color/secondaryText"
+
+                />
+
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/primaryText" />
+
+          <!--  <TextView
+                style="@style/heading_text_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:paddingStart="10dp"
+                android:text="Username"
+                android:textAllCaps="true" />
+
+            <EditText
+                android:id="@+id/edit_username"
+                style="@style/secondary_text_regular_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/transparent"
+                android:focusableInTouchMode="true"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="AhsanSyed1234"
+                android:textColorHint="@color/secondaryText"
+
+                />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/primaryText" />-->
+
+
+            <TextView
+                style="@style/heading_text_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:paddingStart="10dp"
+                android:text="@string/phone_number"
+                android:textAllCaps="true" />
+
+            <EditText
+                android:id="@+id/edit_Phone"
+                style="@style/secondary_text_regular_medium"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/transparent"
+                android:focusableInTouchMode="true"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text=""
+                android:textAlignment="viewStart"
+                android:textColorHint="@color/secondaryText"
+
+                />
+
+
+            <View
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/primaryText" />
+
+            <TextView
+                android:visibility="gone"
+                style="@style/heading_text_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:paddingStart="10dp"
+                android:text="@string/address"
+                android:textAllCaps="true" />
+
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/edit_address"
+                style="@style/secondary_text_regular_medium"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/transparent"
+                android:focusableInTouchMode="true"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text=""
+                android:textColorHint="@color/secondaryText"
+                android:textAlignment="viewStart"
+                />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        app:cardElevation="5dp"
+        android:elevation="5dp"
+        android:layout_marginBottom="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/app_button_background"
+            android:padding="5dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/update"
+                android:textAllCaps="true"
+                android:layout_weight="1"
+                style="@style/white_text_bold_medium"
+                android:gravity="center_horizontal|center_vertical"/>
+
+
+            <ImageView
+                android:id="@+id/buttonBackImage"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/icon_arrow"
+                android:layout_marginEnd="10dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</LinearLayout>
+
+
+
+</LinearLayout>

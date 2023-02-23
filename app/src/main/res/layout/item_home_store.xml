@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/accent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/categoryName"
+        style="@style/secondary_text_bold_Extralarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Massages" />
+
+
+    <TextView
+        android:id="@+id/btnSeeAll"
+        style="@style/colorPrimary_text_medium_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="@string/see_all"
+        android:textAllCaps="true" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/itemRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/categoryName"
+        android:layout_marginTop="5dp" />
+
+
+
+
+
+</RelativeLayout>
